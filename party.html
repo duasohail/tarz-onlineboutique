@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TARZ || fashion that's suits you! </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+	}
+/* show 2 items */
+.carousel-inner .active + .carousel-item {
+	display: block;
+}
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+	transition: none;
+}
+.carousel-inner .carousel-item-next {
+	position: relative;
+	transform: translate3d(0, 0, 0);
+}
+/* left or forward direction */
+.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.carousel-item-next.carousel-item-left + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+	position: relative;
+	transform: translate3d(-100%, 0, 0);
+	visibility: visible;
+}
+/* farthest right hidden item must be also positioned for animations */
+.carousel-inner .carousel-item-prev.carousel-item-right {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	display: block;
+	visibility: visible;
+}/* right or prev direction */
+.active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+.carousel-item-prev.carousel-item-right + .carousel-item,
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+	position: relative;
+	transform: translate3d(100%, 0, 0);
+	visibility: visible;
+	display: block;
+	visibility: visible;
+}
+}
+/* MD */
+@media (min-width: 768px) {
+/* show 3rd of 3 item slide */
+.carousel-inner .active + .carousel-item + .carousel-item {
+	display: block;
+}
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+	transition: none;
+}
+.carousel-inner .carousel-item-next {
+	position: relative;
+	transform: translate3d(0, 0, 0);
+}
+/* left or forward direction */
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+	position: relative;
+	transform: translate3d(-100%, 0, 0);
+	visibility: visible;
+}/* right or prev direction */
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+	position: relative;
+	transform: translate3d(100%, 0, 0);
+	visibility: visible;
+	display: block;
+	visibility: visible;
+}
+}
+/* LG */
+@media (min-width: 991px) {
+/* show 4th item */
+.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+	display: block;
+}
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+	transition: none;
+}
+/* Show 5th slide on lg if col-lg-3 */
+.carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	position: absolute;
+	top: 0;
+	right: -25%;  /*change this with javascript in the future*/
+	z-index: -1;
+	display: block;
+	visibility: visible;
+}
+/* left or forward direction */
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	position: relative;
+	transform: translate3d(-100%, 0, 0);
+	visibility: visible;
+}/* right or prev direction //t - previous slide direction last item animation fix */
+.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	position: relative;
+	transform: translate3d(100%, 0, 0);
+	visibility: visible;
+	display: block;
+	visibility: visible;
+}
+}
+</style>
+<body>
+    <div class="container-flex">
+        <div class="row no-gutters">
+            <div class="col-sm-10 col-md-10 col-lg-10 pt-3 pb-3 bg-light" id="wlcm">
+              <a class="text-dark pl-2" href="#">WELCOME TO<b class="text-warning"> TARZ</b></a>
+              <a href="#" class="text-dark pl-2">SIGN IN <img class="img-fluid" src="img/pak-flag.png" width="20px" height="14px"></a>
+              <a href="#" class="text-dark pl-2">CREATE AN ACCOUNT</a>
+            </div>
+
+            <div class="col-sm-2 col-md-2 col-lg-2 bg-light">
+              
+                <form >
+                  <span><a class="text-dark" href="#"><i class="fa fa-shopping-bag pt-3 "></i>&nbsp;&nbsp;</a><input type="text" placeholder="SEARCH" class="form-control bg-light" style="display:inline-block; width: 200px; height: 25px;">
+                </form> 
+              </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="row no-gutters">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center" style="color:rgb(255, 115, 0);" id="logo">
+               TARZ
+
+          </div>
+
+        </div>
+  
+        <div class="row no-gutters">
+            <div class="col-lg-12 col-sm-12 col-md-12 bg-light">
+                <nav class="navbar   navbar-expand-lg  navbar-light bg-light" id="nv">
+      
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse  justify-content-center" id="navbarSupportedContent">
+                      
+                      <ul class="nav ">
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="new_arrival.html">NEW ARRIVALS</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="casual.html">CASUAL</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="party.html">PARTY WEAR</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="fragnance.html">FRAGNANCE</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-dark" href="cust_review.html">CUSTOMER REVIEW</a>
+                        </li>
+                      </ul>
+                        
+                    </div>
+                  </nav>
+            </div>
+        </div>
+
+<!--page start 4rm here-->
+      
+  <div class="row no-gutters  mb-5" id="feature5">
+    <div class="col-sm-12 col-md-12 col-lg-12 ">
+      <div class="pt-5" style="height: 250px; background-color: rgba(102, 102, 151, 0.555);" >
+          
+          <h2  class="text-center text-white mt-5 ">PARTY WEAR</h2>
+          
+        </div>
+
+
+      </div>
+  </div>
+
+  <!--end-->
+
+<div class="row no-gutters">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+
+    <!-- Top content -->
+<div class="top-content" style="height: 500px !important;">
+  <div class="container-fluid">
+      <div id="carousel-example" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto pt-4" role="listbox">
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                  <img src="img/w1.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img1">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/w3.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img2">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 4,500<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+
+                </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/w2.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img3">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 4000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+
+                </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/p1.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img4">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+
+                </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/16.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img5">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+
+                </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/p2.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img6">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+
+                </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/p3.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img7">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+
+                </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/w5.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img8">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="row no-gutters">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+
+    <!-- Top content -->
+<div class="top-content " style="height: 500px !important;">
+  <div class="container-fluid">
+      <div id="carousel-example2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto pt-4" role="listbox">
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3 active">
+                  <img src="img/w4.png" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img1">
+                  <p class="pl-4 pt-2" style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/p4.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img2">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/10.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img3">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/k7.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img4">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/12.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img5">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/6.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img6">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/p3.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img7">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+              <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
+                  <img src="img/w3.jpg" style="height:350px !important;" class="img-fluid mx-auto d-block" alt="img8">
+                  <p class=" pl-4 pt-2"  style="color: rgb(255, 115, 0);">Price: 3000<br><a  style="color: rgb(255, 115, 0);" href="#"><b>ADD TO BAG</b></a></p>
+                  
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example2" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example2" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+  </div>
+
+  </div>
+</div>
+
+<!--services-->
+
+<div class="row no-gutters mt-5 mb-5">
+    <div class="col-sm-4 col-md-4 col-lg-4 pb-5 " id="line">
+      <div class="text-dark text-center">
+        <span class="text-dark" id="mnybck">Money Back Guarantee</span>
+        <p class="text-dark pt-1">30 Days Money Back Guarantee</p>
+        <i class="fa fa-dollar pt-2" style="font-size:51px;"></i><i class="fa fa-dollar" style="font-size:51px;"></i>
+        
+      </div>  
+    </div>
+  
+    <div class="col-sm-4 col-md-4 col-lg-4 pb-5 " id="line">
+      <div class="text-dark text-center">
+        <span class="text-dark " id="mnybck">FREE SHIPPING & RETURN</span>
+        <p class="text-dark pt-1">Free Shipping over $300</p>
+        <i class="fa fa-truck pt-2" style="font-size:51px;"></i>
+      </div>  
+    </div>
+  
+    <div class="col-sm-4 col-md-4 col-lg-4 pb-5 ">
+      <div class="text-dark text-center">
+        <span id="mnybck">022-00-4046-737</span>
+        <p class="text-dark pt-1">24/7 Available Support</p>
+        <img src="img/customersupp.jpg" width="50px" height="50px" class="img-fluid ">
+      </div>  
+    </div>
+  
+  
+  </div>
+  
+  <!--services end-->
+  
+  <!--FOOTER START-->
+  <div class="row no-gutters bg-dark">
+    <div class="col-sm-4 col-md-4 col-lg-4 m-5">
+        <h4 class="pt-3" style="color:rgb(255, 115, 0);">Contact Us</h4>
+        <hr color="white" width="30%">
+        <p class="text-white" id="pr1">ADDRESS : xyz behind abc plaza shop no 123
+          <br>
+          OPEN: Monday To Saturday
+          <br>
+          TIME: 11am To 10pm
+        </p>
+        
+        <p class="mt-4 "><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115348.16391501743!2d68.29686511311841!3d25.38371001556221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394c70f6d444f3c3%3A0xc00bbc183d41e285!2sHyderabad%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1591087485378!5m2!1sen!2s" width="330" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe></p>
+    </div>
+  
+  
+    <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+      <h4 class="pt-3" style="color:rgb(255, 115, 0);">About Us</h4>
+      <hr color="white" width="30%">
+      <p class="text-white" id="pr1">Our main motive is to design a product of your choice thats suit you, that the desire of your's , that comforts you . We always focus on quality of our stuff. TARZ provide you a quality stuff in a reasonable range. </p>
+       
+    </div>
+  
+  
+    <div class="col-sm-3 col-md-3 col-lg-3 mt-5">
+      <h4 class="pt-3 pl-5" style="color:rgb(255, 115, 0);">Stay Informed</h4>
+      <hr  class="ml-5" color="white" width="47%">
+      <form class="form-group">
+      <input class="form-control ml-5" type="email" placeholder="Email *" style="width: 330px; height:35px;">
+      
+      <button type="submit" class="btn btn-sm ml-5 mt-1" style="background-color:rgb(255, 115, 0);">Subscribe*</button>
+    </form>
+      <p  class="ml-5" id="pr2">*Subscribe our newsletter to recieve early discount offers, updates and products info</p>
+       
+      <h4 class="pt-3 pl-5" style="color:rgb(255, 115, 0);">Useful Links</h4>
+      <hr  class="ml-5" color="white" width="40%">
+      <a href="#"><i class="fa fa-instagram text-light ml-5 mb-4"></i></a><a href="#"><i class="fa fa-facebook text-light ml-3"></i></a>
+       <a href="#"><i class="fa fa-skype text-light ml-3 mb-4"></i></a>
+       <a href="#"><i class="fa fa-whatsapp text-light ml-3 mb-4"></i></a>
+       <a href="#"><i class="fa fa-youtube text-light ml-3  mb-4"></i></a>
+    </div>
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  <div class="row no-gutters"style="background-color:rgb(255, 115, 0);">
+    <div class="col-sm-11 col-md-11 col-lg-11">
+      <p id="pr5" class="text-light pl-2 pt-2">copyright &copy; all right reserved @ " duak3710@gmail.com "</p>
+    </div>
+    <div class="col-sm-1 col-md-1 col-lg-1">
+      <a href="#" class="text-light pl-5 align-right"> <i class="fa fa-arrow-up pt-2"></i></a>
+    </div>
+  
+  </div>
+  
+  
+  
+              
+            
+  
+  
+  
+</div>
+      
+  
+  
+       <!--javascript-->
+       <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+       <script type="text/javascript" src="js/popper.min.js"></script>  
+       <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+  </body>
+  </html>
+
+  <script>
+    /*
+    Carousel
+*/
+$('#carousel-example').on('slide.bs.carousel', function (e) {
+    /*
+        CC 2.0 License Iatek LLC 2018 - Attribution required
+    */
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 5;
+    var totalItems = $('.carousel-item').length;
+ 
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+
+  /*
+    Carousel
+*/
+$('#carousel-example2').on('slide.bs.carousel', function (e) {
+    /*
+        CC 2.0 License Iatek LLC 2018 - Attribution required
+    */
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 5;
+    var totalItems = $('.carousel-item').length;
+ 
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
+  </script>
+ 

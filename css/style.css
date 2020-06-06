@@ -1,0 +1,125 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+#wlcm{
+	font-size: 11px;
+	text-decoration: none;
+}
+a{
+	text-decoration: none;
+	text-decoration-style: none;
+	text-decoration-line: none;
+}
+#cart{
+	font-size: 11px;
+	float: right;
+}
+#mnybck{
+	word-spacing: 0.1em;
+	letter-spacing: 0.06rem;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+
+#line{
+	border-right:2px solid rgba(49, 48, 48, 0.781);
+}
+
+#logo{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Times New Roman', Times, serif;
+}
+#nv{
+	font-size: 12px;
+
+}
+#feature{
+	background-image:url(../img/o.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#feature2{
+	background-image:url(../img/o2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#pr{
+	font-size: 15px;
+	color: white;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1rem;
+}
+
+#frg_txt{
+	font-size: 15px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-align: center;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1rem;
+	
+}
+#pr1{
+	font-size: 13px;
+	color: white;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1rem;
+}
+#pr2{
+	font-size: 12px;
+	color:lightgray;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1rem;
+
+}
+#pr5{
+	font-size: 12px;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1rem;	
+}
+#kurtibg{
+	background-image: url(../img/or.jpg);
+	background-size: cover;
+
+}
+#feature3{
+	background-image:url(../img/casual.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#feature4{
+	background-image:url(../img/party.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#feature5{
+	background-image:url(../img/casual1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#feature6{
+	background-image:url(../img/rv.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+#feature7{
+	background-image:url(../img/fcvr2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+
