@@ -1,2 +1,2 @@
-Tarz is an online women boutique site, front-end design just for a practice
+Tarz is an online women's boutique template, front-end design just for a practice
 #justForPractice
